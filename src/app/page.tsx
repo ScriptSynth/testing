@@ -9,13 +9,11 @@ import {
   CheckCircle2,
   ChevronDown,
   Zap,
-  Shield,
   BarChart3,
   Menu,
   X,
   FileText,
   Send,
-  Layers,
   Twitter,
   Linkedin,
   Github,
@@ -324,10 +322,26 @@ export default function LandingPage() {
             <p className="mb-8 text-center text-sm font-medium text-muted-foreground">
               Trusted by teams at innovative companies
             </p>
-            <div className="flex flex-wrap items-center justify-center gap-x-12 gap-y-6 opacity-40 grayscale">
-              {["Vercel", "Stripe", "Notion", "Linear", "Figma"].map((company) => (
-                <div key={company} className="text-xl font-bold tracking-tight text-foreground">
-                  {company}
+            <div className="flex flex-wrap items-center justify-center gap-x-10 gap-y-6 opacity-50 grayscale hover:grayscale-0 transition-all duration-500">
+              {[
+                { name: "Vercel", logo: "/logos/vercel.svg" },
+                { name: "Stripe", logo: "/logos/stripe.svg" },
+                { name: "Notion", logo: "/logos/notion.svg" },
+                { name: "Linear", logo: "/logos/linear.svg" },
+                { name: "Figma", logo: "/logos/figma.svg" },
+              ].map((company) => (
+                <div key={company.name} className="flex items-center gap-2">
+                  <img
+                    src={company.logo}
+                    alt={`${company.name} logo`}
+                    width={32}
+                    height={32}
+                    className="h-8 w-8 rounded-md"
+                    loading="lazy"
+                  />
+                  <span className="text-lg font-bold tracking-tight text-foreground">
+                    {company.name}
+                  </span>
                 </div>
               ))}
             </div>
@@ -619,10 +633,10 @@ export default function LandingPage() {
               className="mt-14 grid grid-cols-2 gap-6 sm:grid-cols-4"
             >
               {[
-                { name: "Trello", color: "#0079BF" },
-                { name: "ClickUp", color: "#7B68EE" },
-                { name: "Asana", color: "#F06A6A" },
-                { name: "Monday.com", color: "#FF3D57" },
+                { name: "Trello", logo: "/logos/trello.svg", color: "#0052CC" },
+                { name: "ClickUp", logo: "/logos/clickup.svg", color: "#7B68EE" },
+                { name: "Asana", logo: "/logos/asana.svg", color: "#F06A6A" },
+                { name: "Monday.com", logo: "/logos/monday.svg", color: "#FF3D57" },
               ].map((integration, i) => (
                 <motion.div
                   key={integration.name}
@@ -634,21 +648,42 @@ export default function LandingPage() {
                     className="flex h-14 w-14 items-center justify-center rounded-xl transition-transform group-hover:scale-110"
                     style={{ backgroundColor: `${integration.color}15` }}
                   >
-                    <Layers className="h-7 w-7" style={{ color: integration.color }} />
+                    <img
+                      src={integration.logo}
+                      alt={`${integration.name} logo`}
+                      width={36}
+                      height={36}
+                      className="h-9 w-9 rounded-lg"
+                      loading="lazy"
+                    />
                   </div>
                   <span className="text-sm font-semibold text-foreground">{integration.name}</span>
                 </motion.div>
               ))}
             </motion.div>
 
-            <motion.p
+            <motion.div
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
-              className="mt-8 text-sm text-muted-foreground"
+              className="mt-8 flex items-center justify-center gap-3 text-sm text-muted-foreground"
             >
-              + Jira, Notion, Linear, and more coming soon
-            </motion.p>
+              <span>Coming soon:</span>
+              <div className="flex items-center gap-2">
+                <img src="/logos/jira.svg" alt="Jira" width={20} height={20} className="h-5 w-5 rounded" loading="lazy" />
+                <span>Jira</span>
+              </div>
+              <span>•</span>
+              <div className="flex items-center gap-2">
+                <img src="/logos/notion.svg" alt="Notion" width={20} height={20} className="h-5 w-5 rounded" loading="lazy" />
+                <span>Notion</span>
+              </div>
+              <span>•</span>
+              <div className="flex items-center gap-2">
+                <img src="/logos/linear.svg" alt="Linear" width={20} height={20} className="h-5 w-5 rounded" loading="lazy" />
+                <span>Linear</span>
+              </div>
+            </motion.div>
           </div>
         </section>
 
