@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import { prisma } from "@/lib/prisma";
+import { supabase } from "@/lib/supabase";
 
 // Simple in-memory rate limiter
 const rateLimit = new Map<string, { count: number; resetAt: number }>();
@@ -62,9 +62,11 @@ export async function POST(request: NextRequest) {
     }
 
     // Check if already exists
-    const existing = await prisma.waitlistEntry.findUnique({
-      where: { email: normalizedEmail },
-    });
+    const { data: existing } = await supabase
+      .from("waitlist_entries")
+      .select("id")
+      .eq("email", normalizedEmail)
+      .single();
 
     if (existing) {
       return NextResponse.json(
@@ -73,16 +75,24 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // Create entry
-    await prisma.waitlistEntry.create({
-      data: {
+    // Create entry via Supabase REST API
+    const { error: insertError } = await supabase
+      .from("waitlist_entries")
+      .insert({
         email: normalizedEmail,
         name: name ? String(name).trim().slice(0, 100) : null,
         source: source ? String(source).trim().slice(0, 50) : "direct",
-      },
-    });
+      });
 
-    // Optional: Send welcome email via Resend
+    if (insertError) {
+      console.error("Supabase insert error:", insertError);
+      return NextResponse.json(
+        { error: "Something went wrong. Please try again." },
+        { status: 500 }
+      );
+    }
+
+    // Send welcome email via Resend
     if (process.env.RESEND_API_KEY && process.env.RESEND_API_KEY !== "re_your_api_key_here") {
       try {
         const { Resend } = await import("resend");
@@ -204,7 +214,6 @@ export async function POST(request: NextRequest) {
           `,
         });
       } catch (emailError) {
-        // Don't fail the signup if email fails
         console.error("Failed to send welcome email:", emailError);
       }
     }

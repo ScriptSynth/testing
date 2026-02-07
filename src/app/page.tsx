@@ -20,6 +20,7 @@ import {
   Star,
 } from "lucide-react";
 import { WaitlistForm } from "@/components/waitlist-form";
+import { AnimatedTerminal } from "@/components/animated-terminal";
 
 /* ───────────────────────────── Animations ───────────────────────────── */
 
@@ -255,61 +256,14 @@ export default function LandingPage() {
               </motion.p>
             </motion.div>
 
-            {/* Hero visual — Abstract gradient mockup */}
+            {/* Hero visual — Animated Terminal showing the full process */}
             <motion.div
               initial={{ opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.5, ease: [0.25, 0.4, 0.25, 1] }}
               className="relative mx-auto mt-16 max-w-3xl"
             >
-              <div className="overflow-hidden rounded-2xl border border-border/80 bg-white shadow-2xl shadow-indigo-500/10">
-                {/* Mockup toolbar */}
-                <div className="flex items-center gap-2 border-b border-border/80 bg-secondary/50 px-4 py-3">
-                  <div className="h-3 w-3 rounded-full bg-red-400" />
-                  <div className="h-3 w-3 rounded-full bg-yellow-400" />
-                  <div className="h-3 w-3 rounded-full bg-green-400" />
-                  <div className="ml-4 h-5 w-48 rounded bg-border/60" />
-                </div>
-                {/* Mockup content */}
-                <div className="p-6 md:p-8">
-                  <div className="grid gap-4 md:grid-cols-2">
-                    {/* Left: Notes */}
-                    <div className="space-y-3 rounded-xl bg-secondary/50 p-5">
-                      <div className="flex items-center gap-2 text-sm font-medium text-foreground">
-                        <FileText className="h-4 w-4 text-primary" />
-                        Meeting Notes
-                      </div>
-                      <div className="space-y-2">
-                        <div className="h-3 w-full rounded bg-border/50" />
-                        <div className="h-3 w-4/5 rounded bg-border/50" />
-                        <div className="h-3 w-full rounded bg-primary/20" />
-                        <div className="h-3 w-3/4 rounded bg-border/50" />
-                        <div className="h-3 w-full rounded bg-primary/20" />
-                        <div className="h-3 w-5/6 rounded bg-border/50" />
-                      </div>
-                    </div>
-                    {/* Right: Action Items */}
-                    <div className="space-y-3 rounded-xl bg-secondary/50 p-5">
-                      <div className="flex items-center gap-2 text-sm font-medium text-foreground">
-                        <CheckCircle2 className="h-4 w-4 text-green-600" />
-                        Detected Action Items
-                      </div>
-                      <div className="space-y-2">
-                        {["Update landing page copy", "Send proposal to client", "Schedule design review"].map((item) => (
-                          <div key={item} className="flex items-center gap-2 rounded-lg bg-white px-3 py-2 text-sm shadow-sm border border-border/50">
-                            <CheckCircle2 className="h-3.5 w-3.5 text-primary shrink-0" />
-                            <span className="text-foreground">{item}</span>
-                          </div>
-                        ))}
-                        <div className="mt-3 flex items-center gap-2 rounded-lg bg-primary/5 border border-primary/20 px-3 py-2 text-sm text-primary font-medium">
-                          <Send className="h-3.5 w-3.5 shrink-0" />
-                          Synced to Trello ✓
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              <AnimatedTerminal />
               {/* Glow effect */}
               <div className="absolute -inset-4 -z-10 rounded-3xl bg-gradient-to-r from-indigo-500/10 via-violet-500/10 to-purple-500/10 blur-2xl" />
             </motion.div>

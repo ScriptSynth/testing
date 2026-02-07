@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import { prisma } from "@/lib/prisma";
+import { supabase } from "@/lib/supabase";
 
 export async function GET(request: NextRequest) {
   // Simple password auth
@@ -11,11 +11,29 @@ export async function GET(request: NextRequest) {
   }
 
   try {
-    const entries = await prisma.waitlistEntry.findMany({
-      orderBy: { createdAt: "desc" },
-    });
+    const { data: entries, error } = await supabase
+      .from("waitlist_entries")
+      .select("*")
+      .order("created_at", { ascending: false });
 
-    return NextResponse.json({ entries, count: entries.length });
+    if (error) {
+      console.error("Supabase query error:", error);
+      return NextResponse.json(
+        { error: "Failed to fetch entries" },
+        { status: 500 }
+      );
+    }
+
+    return NextResponse.json({
+      entries: (entries || []).map((e) => ({
+        id: e.id,
+        email: e.email,
+        name: e.name,
+        source: e.source,
+        createdAt: e.created_at,
+      })),
+      count: entries?.length || 0,
+    });
   } catch (error) {
     console.error("Admin API error:", error);
     return NextResponse.json(
