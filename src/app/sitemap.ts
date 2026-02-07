@@ -1,7 +1,7 @@
 import { MetadataRoute } from "next";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "https://meetingsync.io";
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "https://syros.tech";
 
   return [
     {

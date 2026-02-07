@@ -8,7 +8,6 @@ import {
   RefreshCw,
   CheckCircle2,
   ChevronDown,
-  Zap,
   BarChart3,
   Menu,
   X,
@@ -45,7 +44,7 @@ const jsonLd = {
   "@graph": [
     {
       "@type": "SoftwareApplication",
-      name: "MeetingSync",
+      name: "Syros",
       applicationCategory: "BusinessApplication",
       operatingSystem: "Web",
       description:
@@ -63,12 +62,12 @@ const jsonLd = {
     },
     {
       "@type": "Organization",
-      name: "MeetingSync",
-      url: "https://meetingsync.io",
-      logo: "https://meetingsync.io/logo.svg",
+      name: "Syros",
+      url: "https://syros.tech",
+      logo: "https://syros.tech/logo.svg",
       sameAs: [
-        "https://twitter.com/meetingsync",
-        "https://linkedin.com/company/meetingsync",
+        "https://twitter.com/syros",
+        "https://linkedin.com/company/syros",
       ],
     },
     {
@@ -76,18 +75,18 @@ const jsonLd = {
       mainEntity: [
         {
           "@type": "Question",
-          name: "How does MeetingSync's AI detection work?",
+          name: "How does Syros's AI detection work?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "MeetingSync uses advanced natural language processing to analyze your meeting notes in real-time. It identifies action items, deadlines, and assignees by understanding context, action verbs, and follow-up language patterns.",
+            text: "Syros uses advanced natural language processing to analyze your meeting notes in real-time. It identifies action items, deadlines, and assignees by understanding context, action verbs, and follow-up language patterns.",
           },
         },
         {
           "@type": "Question",
-          name: "Which project management tools does MeetingSync support?",
+          name: "Which project management tools does Syros support?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "MeetingSync integrates with Trello, ClickUp, Asana, Monday.com, Jira, Notion, and Linear. We're constantly adding new integrations based on user feedback.",
+            text: "Syros integrates with Trello, ClickUp, Asana, Monday.com, Jira, Notion, and Linear. We're constantly adding new integrations based on user feedback.",
           },
         },
         {
@@ -100,7 +99,7 @@ const jsonLd = {
         },
         {
           "@type": "Question",
-          name: "Can I try MeetingSync for free?",
+          name: "Can I try Syros for free?",
           acceptedAnswer: {
             "@type": "Answer",
             text: "Yes! Our Free tier includes 5 meeting syncs per month with one integration. It's a great way to experience the core product before upgrading.",
@@ -129,11 +128,9 @@ export default function LandingPage() {
         {/* ─────────── NAVBAR ─────────── */}
         <nav className="sticky top-0 z-50 glass border-b border-border/50">
           <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-            <a href="/" className="flex items-center gap-2" aria-label="MeetingSync Home">
-              <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary">
-                <Zap className="h-4 w-4 text-white" />
-              </div>
-              <span className="text-lg font-bold text-foreground">MeetingSync</span>
+            <a href="/" className="flex items-center gap-2" aria-label="Syros Home">
+              <img src="/icon.svg" alt="Syros" width={32} height={32} className="h-8 w-8 rounded-lg" />
+              <span className="text-lg font-bold text-foreground">Syros</span>
             </a>
 
             {/* Desktop links */}
@@ -321,7 +318,7 @@ export default function LandingPage() {
               </motion.h2>
               <motion.p variants={fadeUp} custom={1} className="mx-auto mt-4 max-w-2xl text-lg text-muted-foreground">
                 Sound familiar? You&apos;re not alone. 73% of action items from meetings are never completed.
-                MeetingSync fixes that.
+                Syros fixes that.
               </motion.p>
             </motion.div>
 
@@ -386,7 +383,7 @@ export default function LandingPage() {
                 Your meeting notes, supercharged
               </motion.h2>
               <motion.p variants={fadeUp} custom={2} className="mx-auto mt-4 max-w-2xl text-lg text-muted-foreground">
-                MeetingSync is the action item tracker that turns every meeting into measurable progress.
+                Syros is the action item tracker that turns every meeting into measurable progress.
               </motion.p>
             </motion.div>
 
@@ -397,7 +394,7 @@ export default function LandingPage() {
                   icon: Brain,
                   title: "AI-Powered Action Item Detection",
                   description:
-                    "Our AI analyzes your meeting notes in real-time, identifying tasks, deadlines, and assignees with 95%+ accuracy. No more manually extracting action items — just write your notes naturally and let MeetingSync do the rest.",
+                    "Our AI analyzes your meeting notes in real-time, identifying tasks, deadlines, and assignees with 95%+ accuracy. No more manually extracting action items — just write your notes naturally and let Syros do the rest.",
                   points: [
                     "Natural language understanding",
                     "Deadline & assignee detection",
@@ -409,7 +406,7 @@ export default function LandingPage() {
                   icon: RefreshCw,
                   title: "One-Click Sync to Your PM Tools",
                   description:
-                    "Detected action items are automatically synced to Trello, ClickUp, Asana, and more. Choose your board, list, or project — MeetingSync handles the rest. No more copy-pasting between apps.",
+                    "Detected action items are automatically synced to Trello, ClickUp, Asana, and more. Choose your board, list, or project — Syros handles the rest. No more copy-pasting between apps.",
                   points: [
                     "10+ integrations supported",
                     "Custom field mapping",
@@ -522,7 +519,7 @@ export default function LandingPage() {
                   icon: FileText,
                   title: "Take Meeting Notes",
                   description:
-                    "Write your notes however you like — bullet points, paragraphs, or stream of consciousness. MeetingSync works with any format.",
+                    "Write your notes however you like — bullet points, paragraphs, or stream of consciousness. Syros works with any format.",
                 },
                 {
                   step: "02",
@@ -674,7 +671,7 @@ export default function LandingPage() {
                   name: "Free",
                   price: "$0",
                   period: "forever",
-                  description: "Perfect for trying MeetingSync",
+                  description: "Perfect for trying Syros",
                   features: [
                     "5 meeting syncs / month",
                     "1 integration",
@@ -794,7 +791,7 @@ export default function LandingPage() {
               {[
                 {
                   q: "How does the AI detection work?",
-                  a: "MeetingSync uses advanced natural language processing to analyze your meeting notes. It identifies action verbs, task-related phrases, deadline mentions, and name references to extract action items with 95%+ accuracy. You can review and confirm before syncing.",
+                  a: "Syros uses advanced natural language processing to analyze your meeting notes. It identifies action verbs, task-related phrases, deadline mentions, and name references to extract action items with 95%+ accuracy. You can review and confirm before syncing.",
                 },
                 {
                   q: "Which project management tools do you support?",
@@ -814,14 +811,14 @@ export default function LandingPage() {
                 },
                 {
                   q: "Does it work with meeting transcripts?",
-                  a: "Yes! MeetingSync works with manual notes, meeting transcripts from Zoom, Google Meet, and Teams, and even audio recordings (coming soon). Paste in any text and our AI will extract the action items.",
+                  a: "Yes! Syros works with manual notes, meeting transcripts from Zoom, Google Meet, and Teams, and even audio recordings (coming soon). Paste in any text and our AI will extract the action items.",
                 },
                 {
                   q: "What happens when I reach my monthly sync limit?",
                   a: "On the Free plan, you'll get a friendly notification when approaching your limit. You can upgrade to Pro for unlimited syncs at any time. Your existing synced items remain active regardless.",
                 },
                 {
-                  q: "Can I use MeetingSync with my whole team?",
+                  q: "Can I use Syros with my whole team?",
                   a: "Absolutely. Our Team plan supports up to 20 members with shared dashboards, accountability reports, and admin controls. For larger teams, contact us for Enterprise pricing.",
                 },
               ].map((faq, i) => (
@@ -904,33 +901,31 @@ export default function LandingPage() {
           <div className="mx-auto max-w-6xl">
             <div className="flex flex-col items-center justify-between gap-8 md:flex-row">
               <div className="flex items-center gap-2">
-                <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary">
-                  <Zap className="h-4 w-4 text-white" />
-                </div>
-                <span className="text-lg font-bold text-foreground">MeetingSync</span>
+                <img src="/icon.svg" alt="Syros" width={32} height={32} className="h-8 w-8 rounded-lg" />
+                <span className="text-lg font-bold text-foreground">Syros</span>
               </div>
 
               <div className="flex flex-wrap items-center justify-center gap-6 text-sm text-muted-foreground">
                 <a href="/privacy" className="transition-colors hover:text-foreground">Privacy Policy</a>
                 <a href="/terms" className="transition-colors hover:text-foreground">Terms of Service</a>
-                <a href="mailto:hello@meetingsync.io" className="transition-colors hover:text-foreground">Contact</a>
+                <a href="mailto:hello@syros.tech" className="transition-colors hover:text-foreground">Contact</a>
               </div>
 
               <div className="flex items-center gap-4">
-                <a href="https://twitter.com/meetingsync" target="_blank" rel="noopener noreferrer" aria-label="Twitter" className="text-muted-foreground transition-colors hover:text-foreground">
+                <a href="https://twitter.com/syros" target="_blank" rel="noopener noreferrer" aria-label="Twitter" className="text-muted-foreground transition-colors hover:text-foreground">
                   <Twitter className="h-5 w-5" />
                 </a>
-                <a href="https://linkedin.com/company/meetingsync" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="text-muted-foreground transition-colors hover:text-foreground">
+                <a href="https://linkedin.com/company/syros" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="text-muted-foreground transition-colors hover:text-foreground">
                   <Linkedin className="h-5 w-5" />
                 </a>
-                <a href="https://github.com/meetingsync" target="_blank" rel="noopener noreferrer" aria-label="GitHub" className="text-muted-foreground transition-colors hover:text-foreground">
+                <a href="https://github.com/syros" target="_blank" rel="noopener noreferrer" aria-label="GitHub" className="text-muted-foreground transition-colors hover:text-foreground">
                   <Github className="h-5 w-5" />
                 </a>
               </div>
             </div>
 
             <div className="mt-8 border-t border-border/50 pt-8 text-center text-sm text-muted-foreground">
-              © {new Date().getFullYear()} MeetingSync. All rights reserved.
+              © {new Date().getFullYear()} Syros. All rights reserved.
             </div>
           </div>
         </footer>

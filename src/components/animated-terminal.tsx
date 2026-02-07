@@ -11,7 +11,7 @@ interface TerminalLine {
 }
 
 const terminalSequence: TerminalLine[] = [
-  { text: "$ meetingsync analyze --file standup-notes.md", type: "command", delay: 0 },
+  { text: "$ syros analyze --file standup-notes.md", type: "command", delay: 0 },
   { text: "", type: "dim", delay: 600 },
   { text: "📄 Reading meeting notes...", type: "info", delay: 400 },
   { text: '   Source: "Weekly Standup — Feb 7, 2026"', type: "dim", delay: 300 },
@@ -123,7 +123,7 @@ export function AnimatedTerminal() {
           <div className="h-3 w-3 rounded-full bg-[#febc2e]" />
           <div className="h-3 w-3 rounded-full bg-[#28c840]" />
         </div>
-        <span className="text-xs font-medium text-slate-500">meetingsync — terminal</span>
+        <span className="text-xs font-medium text-slate-500">syros — terminal</span>
         <button
           onClick={runAnimation}
           className="rounded-md px-2.5 py-1 text-xs font-medium text-slate-400 transition-colors hover:bg-slate-700/50 hover:text-slate-200"

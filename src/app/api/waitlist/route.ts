@@ -99,9 +99,9 @@ export async function POST(request: NextRequest) {
         const resend = new Resend(process.env.RESEND_API_KEY);
 
         await resend.emails.send({
-          from: "MeetingSync <onboarding@resend.dev>",
+          from: "Syros <onboarding@resend.dev>",
           to: normalizedEmail,
-          subject: "You're in! Welcome to MeetingSync 🎉",
+          subject: "You're in! Welcome to Syros 🎉",
           html: `
 <!DOCTYPE html>
 <html lang="en">
@@ -115,11 +115,11 @@ export async function POST(request: NextRequest) {
           <!-- Gradient Header -->
           <tr>
             <td style="background:linear-gradient(135deg,#6366f1 0%,#8b5cf6 50%,#a855f7 100%);padding:40px 32px;text-align:center;">
-              <div style="display:inline-block;background:rgba(255,255,255,0.2);border-radius:12px;padding:10px 14px;margin-bottom:16px;">
-                <span style="font-size:28px;">🔗</span>
+              <div style="display:inline-block;background:rgba(255,255,255,0.2);border-radius:12px;padding:12px 16px;margin-bottom:16px;">
+                <span style="font-size:28px;font-weight:900;color:white;">S</span>
               </div>
               <h1 style="margin:0;font-size:26px;font-weight:800;color:#ffffff;letter-spacing:-0.5px;">
-                MeetingSync
+                Syros
               </h1>
               <p style="margin:8px 0 0;font-size:13px;color:rgba(255,255,255,0.8);letter-spacing:0.5px;text-transform:uppercase;">
                 AI-Powered Meeting Intelligence
@@ -137,7 +137,7 @@ export async function POST(request: NextRequest) {
                 Hey${name ? ` <strong>${name}</strong>` : " there"},
               </p>
               <p style="margin:0 0 20px;font-size:15px;color:#475569;line-height:1.7;">
-                Thanks for joining the MeetingSync waitlist. We're building something special — an AI-powered tool that <strong>automatically turns your meeting notes into action items</strong> and syncs them directly to your project management tools.
+                Thanks for joining the Syros waitlist. We're building something special — an AI-powered tool that <strong>automatically turns your meeting notes into action items</strong> and syncs them directly to your project management tools.
               </p>
             </td>
           </tr>
@@ -180,8 +180,8 @@ export async function POST(request: NextRequest) {
               <p style="margin:0 0 20px;font-size:15px;color:#475569;line-height:1.7;">
                 We'll send you an exclusive invite as soon as we launch. Early waitlist members get <strong style="color:#6366f1;">priority access + special pricing</strong>.
               </p>
-              <a href="https://meetingsync.io" style="display:inline-block;background:linear-gradient(135deg,#6366f1,#8b5cf6);color:#ffffff;text-decoration:none;font-size:15px;font-weight:600;padding:14px 32px;border-radius:10px;letter-spacing:0.3px;">
-                Visit MeetingSync →
+              <a href="https://syros.tech" style="display:inline-block;background:linear-gradient(135deg,#6366f1,#8b5cf6);color:#ffffff;text-decoration:none;font-size:15px;font-weight:600;padding:14px 32px;border-radius:10px;letter-spacing:0.3px;">
+                Visit Syros →
               </a>
             </td>
           </tr>
@@ -200,7 +200,7 @@ export async function POST(request: NextRequest) {
                 Have questions or feature ideas? Just reply to this email — we read every message.
               </p>
               <p style="margin:0;font-size:12px;color:#cbd5e1;">
-                © ${new Date().getFullYear()} MeetingSync. All rights reserved.
+                © ${new Date().getFullYear()} Syros. All rights reserved.
               </p>
             </td>
           </tr>

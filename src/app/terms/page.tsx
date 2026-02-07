@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Terms of Service",
-  description: "MeetingSync terms of service — the rules governing use of our platform.",
+  description: "Syros terms of service — the rules governing use of our platform.",
 };
 
 export default function TermsOfService() {
@@ -15,7 +15,7 @@ export default function TermsOfService() {
         <section>
           <h2 className="mb-3 text-lg font-semibold text-foreground">1. Acceptance of Terms</h2>
           <p>
-            By accessing or using MeetingSync (&quot;the Service&quot;), you agree to be bound by
+            By accessing or using Syros (&quot;the Service&quot;), you agree to be bound by
             these Terms of Service. If you do not agree to these terms, please do not use the
             Service.
           </p>
@@ -24,7 +24,7 @@ export default function TermsOfService() {
         <section>
           <h2 className="mb-3 text-lg font-semibold text-foreground">2. Description of Service</h2>
           <p>
-            MeetingSync is a software-as-a-service (SaaS) platform that uses artificial intelligence
+            Syros is a software-as-a-service (SaaS) platform that uses artificial intelligence
             to detect action items from meeting notes and sync them to project management tools. The
             Service is currently in pre-launch (waitlist) phase.
           </p>
@@ -63,7 +63,7 @@ export default function TermsOfService() {
         <section>
           <h2 className="mb-3 text-lg font-semibold text-foreground">6. Intellectual Property</h2>
           <p>
-            All content, features, and functionality of the Service are owned by MeetingSync and are
+            All content, features, and functionality of the Service are owned by Syros and are
             protected by international copyright, trademark, and other intellectual property laws.
             Your meeting notes and data remain your property.
           </p>
@@ -72,7 +72,7 @@ export default function TermsOfService() {
         <section>
           <h2 className="mb-3 text-lg font-semibold text-foreground">7. Limitation of Liability</h2>
           <p>
-            MeetingSync is provided &quot;as is&quot; without warranties of any kind. We shall not be
+            Syros is provided &quot;as is&quot; without warranties of any kind. We shall not be
             liable for any indirect, incidental, special, or consequential damages resulting from
             your use of the Service. Our total liability shall not exceed the amounts paid by you in
             the 12 months preceding the claim.
@@ -101,8 +101,8 @@ export default function TermsOfService() {
           <h2 className="mb-3 text-lg font-semibold text-foreground">10. Contact Us</h2>
           <p>
             Questions about these terms? Contact us at{" "}
-            <a href="mailto:legal@meetingsync.io" className="text-primary underline">
-              legal@meetingsync.io
+            <a href="mailto:legal@syros.tech" className="text-primary underline">
+              legal@syros.tech
             </a>.
           </p>
         </section>
@@ -110,7 +110,7 @@ export default function TermsOfService() {
 
       <div className="mt-12">
         <a href="/" className="text-sm text-primary hover:underline">
-          ← Back to MeetingSync
+          ← Back to Syros
         </a>
       </div>
     </main>

@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Privacy Policy",
-  description: "MeetingSync privacy policy — how we collect, use, and protect your data.",
+  description: "Syros privacy policy — how we collect, use, and protect your data.",
 };
 
 export default function PrivacyPolicy() {
@@ -72,8 +72,8 @@ export default function PrivacyPolicy() {
           </ul>
           <p className="mt-2">
             To exercise any of these rights, email us at{" "}
-            <a href="mailto:privacy@meetingsync.io" className="text-primary underline">
-              privacy@meetingsync.io
+            <a href="mailto:privacy@syros.tech" className="text-primary underline">
+              privacy@syros.tech
             </a>.
           </p>
         </section>
@@ -90,8 +90,8 @@ export default function PrivacyPolicy() {
           <h2 className="mb-3 text-lg font-semibold text-foreground">8. Contact Us</h2>
           <p>
             If you have questions about this privacy policy, contact us at{" "}
-            <a href="mailto:privacy@meetingsync.io" className="text-primary underline">
-              privacy@meetingsync.io
+            <a href="mailto:privacy@syros.tech" className="text-primary underline">
+              privacy@syros.tech
             </a>.
           </p>
         </section>
@@ -99,7 +99,7 @@ export default function PrivacyPolicy() {
 
       <div className="mt-12">
         <a href="/" className="text-sm text-primary hover:underline">
-          ← Back to MeetingSync
+          ← Back to Syros
         </a>
       </div>
     </main>

@@ -10,14 +10,14 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   metadataBase: new URL(
-    process.env.NEXT_PUBLIC_BASE_URL || "https://meetingsync.io"
+    process.env.NEXT_PUBLIC_BASE_URL || "https://syros.tech"
   ),
   title: {
-    default: "MeetingSync – Turn Meeting Notes Into Action Items Automatically",
-    template: "%s | MeetingSync",
+    default: "Syros – Turn Meeting Notes Into Action Items Automatically",
+    template: "%s | Syros",
   },
   description:
-    "MeetingSync is the meeting notes software that automatically detects action items and syncs them to Trello, ClickUp, Asana & more. Never forget a task again.",
+    "Syros is the meeting notes software that automatically detects action items and syncs them to Trello, ClickUp, Asana & more. Never forget a task again.",
   keywords: [
     "meeting notes software",
     "meeting productivity tool",
@@ -30,14 +30,14 @@ export const metadata: Metadata = {
     "ClickUp integration",
     "Asana integration",
   ],
-  authors: [{ name: "MeetingSync" }],
-  creator: "MeetingSync",
+  authors: [{ name: "Syros" }],
+  creator: "Syros",
   openGraph: {
     type: "website",
     locale: "en_US",
     url: "/",
-    siteName: "MeetingSync",
-    title: "MeetingSync – Turn Meeting Notes Into Action Items Automatically",
+    siteName: "Syros",
+    title: "Syros – Turn Meeting Notes Into Action Items Automatically",
     description:
       "AI-powered meeting notes software that syncs action items to your project management tools. Works with Trello, ClickUp, Asana & more.",
     images: [
@@ -45,17 +45,17 @@ export const metadata: Metadata = {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "MeetingSync – Meeting Notes Software",
+        alt: "Syros – Meeting Notes Software",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "MeetingSync – Turn Meeting Notes Into Action Items Automatically",
+    title: "Syros – Turn Meeting Notes Into Action Items Automatically",
     description:
       "AI-powered meeting notes software that syncs action items to your project management tools.",
     images: ["/og-image.png"],
-    creator: "@meetingsync",
+    creator: "@syaborotech",
   },
   robots: {
     index: true,

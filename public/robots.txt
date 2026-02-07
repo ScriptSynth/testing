@@ -3,4 +3,4 @@ Allow: /
 Disallow: /admin
 Disallow: /api/
 
-Sitemap: https://meetingsync.io/sitemap.xml
+Sitemap: https://syros.tech/sitemap.xml
